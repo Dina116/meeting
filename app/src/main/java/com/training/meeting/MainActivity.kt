@@ -45,6 +45,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntSize
@@ -186,7 +187,7 @@ class MainActivity : ComponentActivity() {
                                         }
                                     }) {
                                         Icon(
-                                            imageVector = if (isRecording) Icons.Default.Close else Icons.Default.Check,
+                                            painter = painterResource(id = if (isRecording) R.drawable.ic_stop else R.drawable.baseline_fiber_manual_record_24),
                                             contentDescription = if (isRecording) "Stop Recording" else "Start Recording",
                                             tint = if (isRecording) Color.Red else Color.Black
                                         )
